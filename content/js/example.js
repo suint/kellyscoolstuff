@@ -1,3 +1,3 @@
 export function doExample() {
-  console.log("This example works too!");
+  console.log("Example function");
 }

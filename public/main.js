@@ -1,2 +1,2 @@
-(()=>{"use strict";document.addEventListener("DOMContentLoaded",()=>{console.log("This example works too!")})})();
+(()=>{"use strict";document.addEventListener("DOMContentLoaded",()=>{console.log("Example function")})})();
 //# sourceMappingURL=main.js.map
