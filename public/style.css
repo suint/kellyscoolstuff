@@ -3,15 +3,35 @@
    "how to change link color." */
 
 body {
-  background-image: url("/img/rain.gif");
   color: black;
   font-family: Verdana, Helvetica, sans-serif;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 3rem;
+  height: 98vh; 
 }
 
 .project {
   border: 1px solid black;
 }
 
-#bio {
-  background-color: aliceblue;
+#main {
+  h1 {
+    font-size: 5rem;
+  }
+  width: 70%;
+  
+}
+
+.line-container {
+  width: 200px;
+  height: 200px;
+}
+
+line {
+  /* Ensures the line thickness stays at 1px regardless of container size */
+  vector-effect: non-scaling-stroke; 
 }
