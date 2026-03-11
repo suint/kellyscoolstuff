@@ -1,25 +1,8 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
-
-body {
-  color: black;
-  font-family: Verdana, Helvetica, sans-serif;
-  background-color: aliceblue;
-  display: flex;
-  justify-content: center; 
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 3rem;
-  height: 98vh; 
-}
-
 #main {
   h1 {
     font-size: 5rem;
   }
   width: 70%;
-  
 }
 
 #site-tree {
@@ -53,8 +36,9 @@ body {
 #welcome {
   height:150px;
   width:150px;
-  min-height:150px;
-  min-width:150px;
+  position:absolute;
+  left: 60%;
+  top: 30%;
   outline-style: dashed;
   border-radius: 75px;
   display: flex;

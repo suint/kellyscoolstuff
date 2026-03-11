@@ -42,6 +42,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
     }),
+    new HtmlWebpackPlugin({
+        favicon: "./content/favicon.ico"
+    })
   ],
 
   // Generate source maps for easier debugging:
