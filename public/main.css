@@ -1,3 +1,3 @@
-body{color:#000;font-family:Verdana,Helvetica,sans-serif;background-color:#f0f8ff;display:flex;justify-content:center;align-items:flex-start;flex-direction:column;padding:3rem;height:98vh}.project{border:1px solid #000}#main h1{font-size:5rem}#main{width:70%}.line-container{width:200px;height:200px}line{vector-effect:non-scaling-stroke}
+body{color:#000;font-family:Verdana,Helvetica,sans-serif;background-color:#f0f8ff;display:flex;justify-content:center;align-items:flex-start;flex-direction:column;padding:3rem;height:98vh}#site-tree{display:flex}.project a:link{text-decoration-style:dashed;color:#2f4f4f}.project a:hover{text-decoration-style:wavy;color:#db7093}#main h1{font-size:5rem}#main{width:70%}#title{margin:.5rem 0}#line-container{width:400px;height:200px}line{vector-effect:non-scaling-stroke}
 
 /*# sourceMappingURL=main.css.map*/

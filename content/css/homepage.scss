@@ -13,9 +13,18 @@ body {
   padding: 3rem;
   height: 98vh; 
 }
-
+#site-tree {
+  display: flex;
+}
 .project {
-  border: 1px solid black;
+  a:link {
+    text-decoration-style: dashed;
+    color:darkslategray;
+  }
+  a:hover {
+    text-decoration-style: wavy;
+    color: palevioletred;
+  }
 }
 
 #main {
@@ -26,8 +35,12 @@ body {
   
 }
 
-.line-container {
-  width: 200px;
+#title {
+  margin: .5rem 0;
+}
+
+#line-container {
+  width: 400px;
   height: 200px;
 }
 
