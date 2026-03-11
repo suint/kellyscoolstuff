@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx @11ty/eleventy & webpack",
-    "local": "npx @11ty/eleventy --serve --port=8080 & webpack --watch",
+    "build": "ng build",
+    "local": "ng serve",
     "serve:ssr:kellyscoolstuff": "node dist/kellyscoolstuff/server/server.mjs"
   },
   "repository": {
