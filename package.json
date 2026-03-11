@@ -26,6 +26,8 @@
   },
   "devDependencies": {
     "css-loader": "^7.1.4",
+    "favicons": "^7.2.0",
+    "favicons-webpack-plugin": "^6.0.1",
     "mini-css-extract-plugin": "^2.10.1",
     "sass": "^1.98.0",
     "sass-loader": "^16.0.7",

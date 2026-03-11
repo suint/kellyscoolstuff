@@ -1,5 +1,7 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+
 
 module.exports = {
   // This enables production mode, which minifies the JS and CSS files for fast loading times:
@@ -41,7 +43,9 @@ module.exports = {
     // define name for generated css files:
     new MiniCssExtractPlugin({
       filename: "[name].css",
-    })
+    }),
+    new FaviconsWebpackPlugin('./favicon.ico') // Path to your source image
+
   ],
 
   // Generate source maps for easier debugging:
