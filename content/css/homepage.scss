@@ -3,6 +3,7 @@
     font-size: 5rem;
   }
   width: 70%;
+  margin-top: 4rem;
 }
 
 #site-tree {
@@ -25,12 +26,18 @@
   position:absolute;
   left: 60%;
   top: 30%;
-  outline-style: dashed;
-  border-radius: 75px;
-  display: flex;
-  align-items: center;
+  display: grid;
+  place-items: center;
   text-align: center;
-  margin-left: 3rem;
+}
+
+#welcome > * {
+  grid-column-start: 1; /* Place all children in the first column */
+  grid-row-start: 1;    /* Place all children in the first row */
+}
+
+#welcome > svg {
+  z-index: 10;
 }
 
 #links {
