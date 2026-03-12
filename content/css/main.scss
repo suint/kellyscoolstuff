@@ -32,7 +32,12 @@ header {
   }
 }
 
+#content {
+  flex: 1 0 auto;
+}
+
 footer {
+  flex-shrink: 0;
   font-size: 0.8rem;
   color: darkslategray;
   margin-bottom: 0;

@@ -2,18 +2,18 @@
 <html lang="en">
   <head>
     <title>Kelly's Cool Stuff | {{ title }}</title>
-    <script src="{{ nesting }}main.js"></script>
+    <script src="{{ nesting }}main.js{{ nocache }}"></script>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="{{ nesting }}favicon.ico" rel="icon" type="image/x-icon" />
-    <link href="{{ nesting }}main.css" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ nesting }}main.css{{ nocache }}" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
     {% if showHeader %}
       <header> <a href="{{ nesting }}"> &lt; back </a> </header>
     {% endif %}
-      {{ content | safe }}
+      <div id="content">{{ content | safe }}</div>
     <footer>hosted by neocities</footer>
   </body>
 </html>
