@@ -1,0 +1,19 @@
+.text-content {
+    max-height: 60vh;
+    overflow-y: scroll;
+    background-color: rgb(255, 255, 255);
+    padding: 0 1rem;
+    font-size: .8rem;
+}
+
+table.text-content {
+    th, td {
+        border-bottom: 1px solid #ddd;
+    }
+    border-collapse: collapse;
+    width: 100%;
+
+    th:nth-child(1),td:nth-child(1) {
+        min-width:5rem;
+    }
+}
