@@ -8,16 +8,12 @@
 
 #site-tree {
   display: flex;
-  height: 400px;
+  height: auto;
+  overflow: hidden;
 }
 
 #title {
   margin: .5rem 0;
-}
-
-#line-container {
-  width: 400px;
-  height: 100%;
 }
 
 .circle-container {
@@ -41,7 +37,7 @@
 }
 
 #welcome {
-  left: 33%;
+  left: 50%;
   top: 15%;
 }
 
@@ -65,6 +61,12 @@
 
 #links {
   height: 100%;
+  h3 {
+    margin: 0;
+  }
+  .link {
+    margin: 1rem 0;
+  }
 }
 
 line {

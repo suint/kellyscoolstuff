@@ -1,0 +1,16 @@
+
+  <div id="site-tree">
+    <div id="line-container">
+      <svg id="svg-line" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <line id="line-y" x1="20" y1="0" x2="50" y2="12" stroke="darkslategray" stroke-width="2" stroke-dasharray="3, 4"  vector-effect="non-scaling-stroke" />
+        <line id="line-x" x1="50" y1="12" x2="100" y2="12" stroke="darkslategray" stroke-width="2" stroke-dasharray="3, 4" vector-effect="non-scaling-stroke" />
+      </svg>
+    </div>
+    <div id="links">
+        {% for link in links %}
+            <div class="link">
+                <a href="{{ link.url }}"><h3>{{ link.linkTitle | safe }}</h3></a>
+            </div>
+        {% endfor %}
+    </div>
+  </div>

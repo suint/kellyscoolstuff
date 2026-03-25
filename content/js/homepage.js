@@ -1,21 +1,22 @@
 
 export function initMoveLine() {
-  let projects = document.getElementsByClassName("project");
+  console.log("init move line");
+  let projects = document.getElementsByClassName("link");
   for (var i = 0; i < projects.length; i++) {
     projects[i].addEventListener("mouseover", moveLine);
   }
 }
 
 export function moveLine(event) {
-  const multiplier = 0.2475;
+  const space = 21;
   let lineY = document.getElementById("line-y");
   let lineX = document.getElementById("line-x");
   let container = document.getElementById("line-container");
   var elementRect = event.target.getBoundingClientRect();
   let containerRect = container.getBoundingClientRect();
-  lineY.setAttribute("y2", (elementRect.bottom - containerRect.top) * multiplier);
-  lineX.setAttribute("y1", (elementRect.bottom - containerRect.top) * multiplier);
-  lineX.setAttribute("y2", (elementRect.bottom - containerRect.top) * multiplier);
+  lineY.setAttribute("y2", ((elementRect.top - containerRect.top) + space)/containerRect.height * 100);
+  lineX.setAttribute("y1", ((elementRect.top - containerRect.top) + space)/containerRect.height * 100);
+  lineX.setAttribute("y2", ((elementRect.top - containerRect.top) + space)/containerRect.height * 100);
 }
 
 
