@@ -1,6 +1,7 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WebpackFavicons = require('webpack-favicons');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   // This enables production mode, which minifies the JS and CSS files for fast loading times:
@@ -51,6 +52,13 @@ module.exports = {
       icons: {
         favicons: true
       }
+    })
+    ,
+    // Copy static images from content/images into public/images
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: path.resolve(__dirname, 'content/images'), to: 'images' }
+      ]
     })
   ],
 

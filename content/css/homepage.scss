@@ -20,33 +20,34 @@
   height: 100%;
 }
 
-#welcome {
-  height:150px;
-  width:150px;
+.circle-container {
+  height:152px;
+  width:152px;
   position:absolute;
-  left: 33%;
-  top: 15%;
   display: grid;
   place-items: center;
   text-align: center;
+  img {
+    width: 150px;
+    height: auto;
+      clip-path: circle(75px at 50% 50%); 
+  }
+
+  * {
+    grid-column-start: 1; /* Place all children in the first column */
+    grid-row-start: 1;    /* Place all children in the first row */
+  }
+}
+
+#welcome {
+  left: 33%;
+  top: 15%;
 }
 
 #pic {
-  height:150px;
-  width:150px;
-  position:absolute;
   left: 60%;
   top: 40%;
-  display: grid;
-  place-items: center;
-  text-align: center;
 }
-
-#welcome > * {
-  grid-column-start: 1; /* Place all children in the first column */
-  grid-row-start: 1;    /* Place all children in the first row */
-}
-
 .circle {
   z-index: 10;
   animation: spin 20s linear infinite;
