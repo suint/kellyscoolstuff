@@ -17,15 +17,26 @@
 
 #line-container {
   width: 400px;
-  height: 200px;
+  height: 100%;
 }
 
 #welcome {
   height:150px;
   width:150px;
   position:absolute;
+  left: 33%;
+  top: 15%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+#pic {
+  height:150px;
+  width:150px;
+  position:absolute;
   left: 60%;
-  top: 30%;
+  top: 40%;
   display: grid;
   place-items: center;
   text-align: center;
@@ -36,13 +47,22 @@
   grid-row-start: 1;    /* Place all children in the first row */
 }
 
-#welcome > svg {
+.circle {
   z-index: 10;
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #links {
-  height: 200px;
-  margin: 158px 0 0 0; // TODO: fix this magic number
+  height: 100%;
 }
 
 line {

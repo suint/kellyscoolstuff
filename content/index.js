@@ -1,6 +1,6 @@
 import "./main.scss"; 
-import { doExample } from "./js/example.js"; 
+import { initMoveLine } from "./assets/js/homepage.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  doExample();
+document.addEventListener("DOMContentLoaded", function () {
+  initMoveLine();
 });
