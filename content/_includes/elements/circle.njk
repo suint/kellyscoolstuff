@@ -1,0 +1,17 @@
+<div id="{{ circleId }}" class="circle-container"> 
+    {# circleId is used to apply positioning
+    inline css doesn't work well with njk because of the use of curly brackets #}
+
+    {% if circlePicture %}
+    <img src="{{ nesting }}{{ circlePicture }}" alt="{{ circlePictureAlt }}" />
+    {% endif %}
+    <svg width="152" height="152" preserveAspectRatio="none" class="circle">
+    <circle cx="76" cy="76" r="75" stroke="darkslategray" stroke-width="2" stroke-dasharray="3, 4"  fill="none" vector-effect="non-scaling-stroke" />
+    </svg>
+    <p>{{ circleText }}</p>
+</div>
+{% if circleHoverText %}
+<div class="caption">
+    <p>{{ caption }}</p>
+</div>
+{% endif %}

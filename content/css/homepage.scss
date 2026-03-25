@@ -29,7 +29,9 @@
       clip-path: circle(75px at 50% 50%); 
       -webkit-clip-path: circle(75px at 50% 50%); 
   }
-
+  p {
+    padding: .2rem;
+  }
   * {
     grid-column-start: 1; /* Place all children in the first column */
     grid-row-start: 1;    /* Place all children in the first row */
@@ -41,9 +43,13 @@
   top: 15%;
 }
 
-#pic {
+#profile-pic {
   left: 60%;
   top: 40%;
+}
+#under-construction {
+  left: 45%;
+  top: 50%;
 }
 .circle {
   z-index: 10;
