@@ -25,6 +25,9 @@
         {% if links %}
           {% include "elements/links.njk" %}
         {% endif %}
+        {% if galleryImages %}
+          {% include "elements/gallery.njk" %}
+        {% endif %}
         {{ content | safe }}
       </div>
     <footer>hosted by neocities</footer>

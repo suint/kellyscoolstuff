@@ -1,5 +1,5 @@
 import "./main.scss"; 
-import { initMoveLine } from "./js/homepage.js";
+import { initMoveLine } from "./js/scripts.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   initMoveLine();

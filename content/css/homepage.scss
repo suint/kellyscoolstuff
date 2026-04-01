@@ -16,53 +16,9 @@
   margin: .5rem 0;
 }
 
-.circle-container {
-  height:152px;
-  width:152px;
-  position:absolute;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  img {
-    width: 150px;
-    height: auto;
-      clip-path: circle(75px at 50% 50%); 
-      -webkit-clip-path: circle(75px at 50% 50%); 
-  }
-  p {
-    padding: .2rem;
-  }
-  * {
-    grid-column-start: 1; /* Place all children in the first column */
-    grid-row-start: 1;    /* Place all children in the first row */
-  }
-}
-
-#welcome {
-  left: 50%;
-  top: 15%;
-}
-
-#profile-pic {
-  left: 60%;
-  top: 40%;
-}
-#under-construction {
-  left: 45%;
-  top: 50%;
-}
-.circle {
-  z-index: 10;
-  animation: spin 20s linear infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#content {
+  max-height:100%;
+  overflow-y: auto;
 }
 
 #links {

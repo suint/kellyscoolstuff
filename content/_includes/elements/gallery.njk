@@ -1,0 +1,9 @@
+<div class="gallery">
+  <h3>{{ galleryTitle }}</h3>
+  {% for image in galleryImages %}
+    <div class="gallery-item">
+        <img src="{{ nesting }}/images/{{ image.fileName }}" alt="{{ image.altText }}" />
+        <div class="image-caption">{{ image.caption }}</div>
+    </div>
+  {% endfor %}
+</div>

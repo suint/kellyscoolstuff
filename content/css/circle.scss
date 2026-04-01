@@ -1,0 +1,63 @@
+
+
+.circle {
+  z-index: 10;
+  animation: spin 20s linear infinite;
+}
+
+.circle-container {
+  height:152px;
+  width:152px;
+  position:absolute;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-color:aliceblue;
+  border-radius:50%;
+  img {
+    width: 150px;
+    height: auto;
+      clip-path: circle(75px at 50% 50%); 
+      -webkit-clip-path: circle(75px at 50% 50%); 
+  }
+  p {
+    padding: .2rem;
+  }
+  * {
+    grid-column-start: 1; /* Place all children in the first column */
+    grid-row-start: 1;    /* Place all children in the first row */
+  }
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.caption {
+  margin-top: 170px;
+  font-size: .8rem;
+  color:lightsteelblue;
+  :hover {
+    color: darkslategray;
+  }
+}
+
+#welcome {
+  left: 50%;
+  top: 15%;
+}
+
+#profile-pic {
+  left: 60%;
+  top: 40%;
+}
+#under-construction {
+  left: 45%;
+  top: 50%;
+}

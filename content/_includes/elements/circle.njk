@@ -9,9 +9,9 @@
     <circle cx="76" cy="76" r="75" stroke="darkslategray" stroke-width="2" stroke-dasharray="3, 4"  fill="none" vector-effect="non-scaling-stroke" />
     </svg>
     <p>{{ circleText }}</p>
+    {% if caption %}
+    <div class="caption">
+        <p>{{ caption }}</p>
+    </div>
+    {% endif %}
 </div>
-{% if circleHoverText %}
-<div class="caption">
-    <p>{{ caption }}</p>
-</div>
-{% endif %}
