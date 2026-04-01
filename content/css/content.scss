@@ -21,8 +21,10 @@ table.text-content {
 .tumblr-embed {
     width: 600px;
     height: 75vh;
-    margin: 0 1rem;
+    margin: 0 1rem 0 0;
     border-radius: 1%;
     border: dotted;
+    border-width: 2.5px;
+    padding: 0 .2rem;
     float:left;
 }
