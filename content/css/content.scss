@@ -18,7 +18,7 @@ table.text-content {
     }
 }
 
-.tumblr-embed {
+.frame {
     width: 600px;
     height: 75vh;
     margin: 0 1rem 0 0;
@@ -27,4 +27,17 @@ table.text-content {
     border-width: 2.5px;
     padding: 0 .2rem;
     float:left;
+}
+
+.gallery {
+    margin: 0 auto;
+    display:grid;
+    .gallery-item > img{
+        max-width: 100%;
+        height: auto;
+        margin-bottom: .5rem;
+    }
+    .button #right {
+        margin-left: .5rem;
+    }
 }
