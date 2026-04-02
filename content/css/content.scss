@@ -19,14 +19,14 @@ table.text-content {
 }
 
 .frame {
-    width: 600px;
-    height: 75vh;
+    width: 600px!important;
+    height: 75vh!important;
     margin: 0 1rem 0 0;
-    border-radius: 1%;
-    border: dotted;
-    border-width: 2.5px;
-    padding: 0 .2rem;
-    float:left;
+    border-radius: 1%!important;
+    border: dotted!important;
+    border-width: 2.5px!important;
+    padding: 0 .2rem!important;
+    float:left!important;
 }
 
 .gallery {
