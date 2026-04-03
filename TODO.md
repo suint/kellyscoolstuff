@@ -1,6 +1,6 @@
 # Todo 
-- Figure out how to set custom favicon
-- Set up layout for other pages
-- Set up guitar, writing, recipes, artwork pages
+- Upload wardrobe, paintings
+- Format and upload guitar tabs
+- Book reviews
 
 Animation ideas: "welcome" bubble floats around screen, dotted line goes to link being hovered over

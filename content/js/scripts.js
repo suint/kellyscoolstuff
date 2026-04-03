@@ -40,6 +40,7 @@ export function initGalleryButtons() {
     let galleryButtonRight = document.getElementById("gallery-button-right");
     galleryButtonLeft.addEventListener("click", galleryButtonLeftClick);
     galleryButtonRight.addEventListener("click", galleryButtonRightClick);
+    gallery.addEventListener("scroll", galleryScroll);
     let galleryCount = document.getElementById("gallery-count");
     let galleryItems = document.getElementsByClassName("gallery-item");
     galleryCount.textContent = "1/" + galleryItems.length;
@@ -48,7 +49,6 @@ export function initGalleryButtons() {
       const galleryWidth = gallery.offsetWidth;
       const itemWidth = item.scrollWidth;
       const margin = (galleryWidth - itemWidth) / 2;
-      console.log("padding: 0 " + margin + "px 0 " + margin + "px;");
       item.setAttribute("style", "padding: 0 " + margin + "px 0 " + margin + "px;");
     }
   }
@@ -84,5 +84,15 @@ export function galleryButtonRightClick(event) {
   });
 }
 
+export function galleryScroll(event) {
+  let gallery = document.getElementById("gallery");
+  let galleryCount = document.getElementById("gallery-count");
+  let galleryItems = document.getElementsByClassName("gallery-item");
+  const totalCount = galleryItems.length;
+  const scrollLeft = gallery.scrollLeft;
+  const galleryWidth = gallery.offsetWidth;
+  const currentIndex = Math.round(scrollLeft / galleryWidth) + 1;
+  galleryCount.textContent = currentIndex + "/" + totalCount;
+}
 
 export default () => "?nocache=" + Date.now();
