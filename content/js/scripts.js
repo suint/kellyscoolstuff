@@ -7,7 +7,6 @@ export function initMoveLine() {
     for (var i = 0; i < projects.length; i++) {
       projects[i].addEventListener("mouseover", moveLine);
       if (i === 0) {
-        console.log("initializing line position");
         let lineY = document.getElementById("line-y");
         let lineX = document.getElementById("line-x");
         let container = document.getElementById("line-container");
