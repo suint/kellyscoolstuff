@@ -1,11 +1,17 @@
-<div class="gallery frame">
-  <div class="button" id="left">&lt;</div>
-  <div class="button" id="right">&gt;</div>
+<div class="frame gallery">
+  <div class="gallery-buttons-container">
+    <div class="gallery-button" id="gallery-button-left">&lt;</div>
+    <div id="gallery-count">1/1</div>
+    <div class="gallery-button" id="gallery-button-right">&gt;</div>
+  </div>
+  <div id="gallery">
   {% for image in galleryImages %}
-  <div class="page-count">{{loop.index}}/{{loop.length}}</div>
     <div class="gallery-item">
         <img src="{{ nesting }}images/{{ image.fileName }}" alt="{{ image.altText }}" />
+        {% if image.caption %}
         <div class="image-caption">{{ image.caption }}</div>
+        {% endif %}
     </div>
   {% endfor %}
+  </div>
 </div>

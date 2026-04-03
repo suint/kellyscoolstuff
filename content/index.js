@@ -1,6 +1,7 @@
 import "./main.scss"; 
-import { initMoveLine } from "./js/scripts.js";
+import { initGalleryButtons, initMoveLine } from "./js/scripts.js";
 
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
   initMoveLine();
+  initGalleryButtons();
 });
