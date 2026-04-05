@@ -86,5 +86,3 @@ export function galleryScroll(event) {
   const currentIndex = Math.round(scrollLeft / galleryWidth) + 1;
   galleryCount.textContent = currentIndex + "/" + totalCount;
 }
-
-export default () => "?nocache=" + Date.now();
