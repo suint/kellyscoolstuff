@@ -42,14 +42,7 @@ export function initGalleryButtons() {
     gallery.addEventListener("scroll", galleryScroll);
     let galleryCount = document.getElementById("gallery-count");
     let galleryItems = document.getElementsByClassName("gallery-item");
-    galleryCount.textContent = "1/" + galleryItems.length;
-    for (let i = 0; i < galleryItems.length; i++) {
-      let item = galleryItems[i];
-      const galleryWidth = gallery.offsetWidth;
-      const itemWidth = item.scrollWidth;
-      const margin = (galleryWidth - itemWidth) / 2;
-      item.setAttribute("style", "padding: 0 " + margin + "px 0 " + margin + "px;");
-    }
+    galleryCount.textContent = "1/" + galleryItems.length
   }
 }
 

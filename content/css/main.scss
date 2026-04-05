@@ -24,10 +24,16 @@ a:visited {
   color:darkslategray;
 }
 
-header {
+.back {
   font-size: 1.5rem;
   color: darkslategray;
   margin-top: 2rem;
+}
+
+.content-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 footer {

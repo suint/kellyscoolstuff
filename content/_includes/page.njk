@@ -10,8 +10,8 @@
     <link href="{{ nesting }}main.css{{ nocache }}" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
-    {% if showHeader %}
-      <header> <a href="{{ nesting }}"> &lt; back </a> </header>
+    {% if showBack %}
+      <div class="back"> <a href="{{ nesting }}"> &lt; back </a> </div>
     {% endif %}
     {% if showCircle %}
       {% include "elements/circle.njk" %}
@@ -21,14 +21,19 @@
       {% else %}
         <div id="content">
       {% endif %}
+      <div class="content-head">
             <h1> {{ title | lower }}</h1>  
         {% if links %}
           {% include "elements/links.njk" %}
         {% endif %}
-        {% if galleryImages %}
-          {% include "elements/gallery.njk" %}
-        {% endif %}
-        {{ content | safe }}
+        </div>
+        <div class="content-body">
+          {% if galleryImages %}
+            {% include "elements/gallery.njk" %}
+          {% endif %}
+          
+          {{ content | safe }}
+        </div>
       </div>
     <footer>hosted by neocities</footer>
   </body>

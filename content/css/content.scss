@@ -32,7 +32,7 @@ table.text-content {
 }
 
 .frame.gallery {
-    width: 1000px;
+    float:left;
     overflow: hidden;
     .gallery-buttons-container {
         width: 100%;
@@ -46,6 +46,7 @@ table.text-content {
         padding: .2rem .5rem 0 .5rem;
         .gallery-button {
             font-weight: bolder;
+            cursor: pointer;
         }
         #gallery-count {
             font-size: .7rem;
@@ -59,32 +60,44 @@ table.text-content {
         flex-wrap: nowrap;
         overflow-x: scroll;
         .gallery-item {
-            display:grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
             padding: .5vh 0;
-            flex-shrink: 0;
-            img{
-                max-width: 600px;
-                max-height: calc(75vh - 2.5rem); 
-                margin-bottom: .5rem;
-                grid-column: 1;
-                grid-row: 1;
-            } 
-            .image-caption {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 0;
+            position: relative;
+            
+            img {
+                max-height: calc(75vh - 2.4rem);
+                margin-bottom: .2rem;
+                object-fit: contain;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .image-overlay {
                 transition: opacity 1s ease-out;
-                opacity: .28;
-                font-size: .8rem;
-                color:aliceblue;
+                opacity: .2;
+                color: aliceblue;
+                overflow: auto;
                 background-color: darkslategray;
                 text-shadow: 2px 2px 1px #000000;
-                margin: 100% 0 0 0;
-                padding: .8rem;
-                grid-column: 1;
-                grid-row: 1;
+                padding: .5rem;
+                position: absolute;
+                left: 0;
+                right: 0;
+                transform: translateY(calc(75vh - 10.1rem));
+                box-sizing: border-box;
+                height: 8rem;
+                overflow: auto;
+                a {
+                    color:aliceblue;
+                }
+                .image-title, .image-caption {
+                    padding: .5rem;
+                }
             }
         }
-        .gallery-item:hover .image-caption {
+        .gallery-item:hover .image-overlay {
             opacity: .8;
         }
     }

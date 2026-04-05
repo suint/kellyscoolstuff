@@ -1,4 +1,4 @@
-<div class="frame gallery">
+<div class="frame gallery" style='width: {{ galleryWidth }};'>
   <div class="gallery-buttons-container">
     <div class="gallery-button" id="gallery-button-left">&lt;</div>
     <div id="gallery-count">1/1</div>
@@ -6,11 +6,24 @@
   </div>
   <div id="gallery">
   {% for image in galleryImages %}
-    <div class="gallery-item">
-        <img src="{{ nesting }}images/{{ image.fileName }}" alt="{{ image.altText }}" />
-        {% if image.caption %}
-        <div class="image-caption">{{ image.caption }}</div>
-        {% endif %}
+    <div class="gallery-item" style='flex: 0 0 {{ galleryWidth }};'>
+        <img src="{{ nesting }}images/{{ image.fileName }}" 
+        {% if image.altText %}alt="{{ image.altText }}" {% endif %}/>
+        <div class="image-overlay">
+          {% if image.title %}
+          <div class="image-title">
+            <h3>
+              {{ image.title }}
+              {% if image.link %}
+              <span class="image-link"><a href="{{ image.link }}" target="_blank">➚</a></span>
+              {% endif %}
+            </h3>
+          </div>
+          {% endif %}
+          {% if image.caption %}
+          <div class="image-caption">{{ image.caption }}</div>
+          {% endif %}
+        </div>
     </div>
   {% endfor %}
   </div>
