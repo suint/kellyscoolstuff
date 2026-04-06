@@ -31,8 +31,12 @@
           {% if galleryImages %}
             {% include "elements/gallery.njk" %}
           {% endif %}
-          
-          {{ content | safe }}
+          <div 
+          {% if galleryImages and galleryWidth %}
+            style="width: auto; overflow: hidden;"
+          {% endif %}> 
+            {{ content | safe }}
+          </div>
         </div>
       </div>
     <footer>hosted by neocities</footer>
