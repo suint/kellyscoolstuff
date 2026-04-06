@@ -11,7 +11,12 @@
   </head>
   <body>
     {% if showBack %}
-      <div class="back"> <a href="{{ nesting }}"> &lt; back </a> </div>
+      <div class="back"> 
+        <a href="{{ nesting }}"> &lt; home</a> 
+        {%if parentLink %}
+          <span class="parent-link"><a href="{{ nesting }}{{ parentLink.url }}"> &lt; {{ parentLink.title }} </a></span>
+        {% endif %}
+      </div>
     {% endif %}
     {% if showCircle %}
       {% include "elements/circle.njk" %}
