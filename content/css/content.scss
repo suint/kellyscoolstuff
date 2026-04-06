@@ -82,9 +82,10 @@ table.text-content {
                 text-shadow: 2px 2px 1px #000000;
                 padding: .5rem;
                 position: absolute;
+                top: 50%;
                 left: 0;
                 right: 0;
-                transform: translateY(calc(75vh - 10.1rem));
+                transform: translateY(-50%);
                 box-sizing: border-box;
                 height: 8rem;
                 overflow: auto;
