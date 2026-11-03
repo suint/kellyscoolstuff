@@ -6,7 +6,7 @@
   </div>
   <div id="gallery">
   {% for image in galleryImages %}
-    <div class="gallery-item" style='flex: 0 0 {{ galleryWidth }};'>
+    <div class="gallery-item" style='flex: 0 0 {{ galleryWidth // 3 }};'>
         <img src="{{ nesting }}images/{{ image.fileName }}" 
         {% if image.altText %}alt="{{ image.altText }}" {% endif %}/>
         <div class="image-overlay">
