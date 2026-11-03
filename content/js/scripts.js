@@ -1,9 +1,11 @@
 export function initMoveLine() {
-  const margin = 21;
+  const lineHeight = 21;
+  const smallLineHeight = 8;
   let lineContainer = document.getElementById("line-container");
   let projects = document.getElementsByClassName("link");
+  let underConstruction = document.getElementsByClassName("under-construction");
   if (lineContainer && projects.length > 0) {
-  lineContainer.setAttribute("style", "height: " + (projects.length * margin * 2) + "px;");
+  lineContainer.setAttribute("style", "height: " + ((projects.length * lineHeight * 2) + (underConstruction.length * smallLineHeight * 2)) + "px;");
     for (var i = 0; i < projects.length; i++) {
       projects[i].addEventListener("mouseover", moveLine);
       if (i === 0) {
@@ -12,9 +14,9 @@ export function initMoveLine() {
         let container = document.getElementById("line-container");
         let elementRect = projects[i].getBoundingClientRect();
         let containerRect = container.getBoundingClientRect();
-        lineY.setAttribute("y2", ((elementRect.top - containerRect.top) + margin)/containerRect.height * 100);
-        lineX.setAttribute("y1", ((elementRect.top - containerRect.top) + margin)/containerRect.height * 100);
-        lineX.setAttribute("y2", ((elementRect.top - containerRect.top) + margin)/containerRect.height * 100);
+        lineY.setAttribute("y2", ((elementRect.top - containerRect.top) + lineHeight)/containerRect.height * 100);
+        lineX.setAttribute("y1", ((elementRect.top - containerRect.top) + lineHeight)/containerRect.height * 100);
+        lineX.setAttribute("y2", ((elementRect.top - containerRect.top) + lineHeight)/containerRect.height * 100);
       }
     }
   }

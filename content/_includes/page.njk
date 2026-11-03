@@ -21,29 +21,28 @@
     {% if showCircle %}
       {% include "elements/circle.njk" %}
     {% endif %}
-      {% if isMain %}
-        <div id="main"> 
-      {% else %}
-        <div id="content">
-      {% endif %}
+    {% if isMain %}
+      <div id="main"> 
+    {% endif %}
+    <div id="content">
       <div class="content-head">
-            <h1> {{ title | lower }}</h1>  
-        {% if links %}
-          {% include "elements/links.njk" %}
+          <h1> {{ title | lower }}</h1>  
+      {% if links %}
+        {% include "elements/links.njk" %}
+      {% endif %}
+      </div>
+      <div class="content-body">
+        {% if galleryImages %}
+          {% include "elements/gallery.njk" %}
         {% endif %}
-        </div>
-        <div class="content-body">
-          {% if galleryImages %}
-            {% include "elements/gallery.njk" %}
-          {% endif %}
-          <div 
-          {% if galleryImages and galleryWidth %}
-            style="width: auto; overflow: hidden;"
-          {% endif %}> 
-            {{ content | safe }}
-          </div>
+        <div 
+        {% if galleryImages and galleryWidth %}
+          style="width: auto; overflow: hidden;"
+        {% endif %}> 
+          {{ content | safe }}
         </div>
       </div>
-    <footer>hosted by neocities</footer>
+    </div>
+    <footer>hosted by neocities. best viewed on desktop</footer>
   </body>
 </html>

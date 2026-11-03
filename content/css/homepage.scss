@@ -1,14 +1,18 @@
 #main {
   h1 {
     font-size: 5rem;
+    margin: 1rem 0;
   }
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 #site-tree {
   display: flex;
   height: auto;
   overflow: hidden;
+  #line-container {
+    height: 300px;
+  }
 }
 
 #title {
