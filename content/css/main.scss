@@ -22,11 +22,11 @@ a:hover {
 a:visited {
   color:darkslategray;
 }
-a.under-construction::after {
+.under-construction::after {
   content: "(under construction)";
   display: inline-block;
   font-size: small;
-  opacity: .7;
+  opacity: .5;
 }
 
 .back {

@@ -18,7 +18,7 @@
         {% endif %}
       </div>
     {% endif %}
-    {% if showCircle %}
+    {% if circle %}
       {% include "elements/circle.njk" %}
     {% endif %}
     {% if isMain %}
@@ -26,7 +26,7 @@
     {% endif %}
     <div id="content">
       <div class="content-head">
-          <h1> {{ title | lower }}</h1>  
+          <h1 {% if underConstruction %} class="under-construction" {% endif %}> {{ title | lower }}</h1>  
       {% if links %}
         {% include "elements/links.njk" %}
       {% endif %}
