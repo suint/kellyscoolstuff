@@ -1,27 +1,21 @@
-<div class="frame gallery" style='width: {{ galleryWidth }};'>
-  <div class="gallery-buttons-container">
-    <div class="gallery-button" id="gallery-button-left">&lt;</div>
-    <div id="gallery-count">1/1</div>
-    <div class="gallery-button" id="gallery-button-right">&gt;</div>
-  </div>
+<div class="frame gallery" style='width: {{ galleryWidth }}px;'>
   <div id="gallery">
   {% for image in galleryImages %}
-    <div class="gallery-item" style='flex: 0 0 {{ galleryWidth // 3 }};'>
-        <img src="{{ nesting }}images/{{ image.fileName }}" 
+    <div class="gallery-item" {% if itemHeight %} style='height: {{ itemHeight }}px;' {% endif %} > {# default is 300px #}
+        <img src="{{ nesting }}images/{{ image.fileName }}"  {% if itemHeight %} style='height: {{ itemHeight }}px;' {% endif %}
         {% if image.altText %}alt="{{ image.altText }}" {% endif %}/>
         <div class="image-overlay">
           {% if image.title %}
-          <div class="image-title">
-            <h3>
-              {{ image.title }}
+          <span class="image-title">
               {% if image.link %}
-              <span class="image-link"><a href="{{ image.link }}" target="_blank">➚</a></span>
+              <span class="image-link"><a href="{{ image.link }}" target="_blank">{{ image.title }}➚</a></span>
+              {% else %}
+              {{ image.title }}
               {% endif %}
-            </h3>
-          </div>
+          </span>
           {% endif %}
           {% if image.caption %}
-          <div class="image-caption">{{ image.caption }}</div>
+          <span class="image-caption">{{ image.caption }}</span>
           {% endif %}
         </div>
     </div>
